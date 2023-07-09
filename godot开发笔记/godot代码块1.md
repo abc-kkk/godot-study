@@ -45,3 +45,12 @@ enemy.material = _shader_material
 _shader_material.set_shader_parameter("flash_modifier",0)
 ```
 
+提前加载场景 
+```
+ResourceLoader.load_threaded_request("")
+
+```
+var progress = []
+ThreadLoadStatus load_threaded_get_status(path: String, progress: Array = [])
+progressbar.value = progress[0]*100
+返回使用 load_threaded_request() 在 path 处启动的线程加载操作的状态。有关可能的返回值，请参见 ThreadLoadStatus。
